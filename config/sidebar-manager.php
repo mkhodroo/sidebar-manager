@@ -8,8 +8,8 @@ return [
     // میدل‌ورهای مسیرهای پکیج
     'middleware' => ['web', 'auth'],
 
-    // نام دیسک فایل‌ها (پیش‌فرض: public)
-    'disk' => 'public',
+    // نام دیسک فایل‌ها (پیش‌فرض: sidebar_public یعنی ذخیره مستقیم داخل public)
+    'disk' => 'sidebar_public',
 
     // مسیر ذخیره تصاویر روی دیسک
     'path' => 'sidebar',

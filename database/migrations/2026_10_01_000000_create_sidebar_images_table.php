@@ -9,10 +9,12 @@ return new class extends Migration {
     {
         Schema::create('sidebar_images', function (Blueprint $table) {
             $table->id();
-            $table->string('key')->default('default')->index();
+            // طول این ستون‌ها عمداً کوتاه نگه داشته شده تا کلید یکتا (key + disk)
+            // زیر حداکثر طول ایندکس MySQL (۱۰۰۰ بایت) باقی بماند.
+            $table->string('key', 64)->default('default')->index();
             $table->string('title')->nullable();
             $table->string('path');
-            $table->string('disk')->default('public');
+            $table->string('disk', 32)->default('public');
             $table->unsignedBigInteger('size')->default(0);
             $table->timestamps();
 
