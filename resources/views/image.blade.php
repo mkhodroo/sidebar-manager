@@ -7,6 +7,7 @@
         <div class="card">
             <div class="card-header bg-primary text-white">
                 <h4 class="mb-0">{{ $title }} - تصویر سایدبار</h4>
+                asd
             </div>
 
             <div class="card-body">
