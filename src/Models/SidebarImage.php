@@ -44,7 +44,9 @@ class SidebarImage extends Model
             return null;
         }
 
-        return Storage::disk($this->disk ?: 'public')->url($this->path);
+        $url = Storage::disk($this->disk ?: 'public')->url($this->path);
+
+        return preg_replace('#(?<!:)//+#', '/', $url);
     }
 
     /**
